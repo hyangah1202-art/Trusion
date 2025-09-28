@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business & Portfolio | Trusion</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/popup.css" />
+  
+  <style>
+    /* 통합 페이지를 위한 임시/보강 스타일 (style.css에 추가 필요) */
+    .section { padding: 60px 0; }
+    .section:nth-child(even) { background-color: #f8f8f8; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { margin-bottom: 8px; color: var(--main-orange); font-size: 1.5rem; }
+    .biz-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .biz-card {
+      padding: 30px;
+      border: 1px solid #efefef;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,.05);
+      text-align: center;
+    }
+    .biz-card h3 { color: #111; margin-bottom: 10px; font-size: 1.5rem; }
+    .biz-card p { color: #555; font-size: 1rem; }
+    
+    /* 포트폴리오 섹션 스타일 */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .portfolio-item {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+      background: #fff;
+    }
+
+    .portfolio-item img {
+      /* height: 200px;  <-- 이 줄을 삭제 */
+      /* object-fit: cover; <-- 이 줄을 아래 .img-ratio img로 이동 */
+      width: 100%;
+      display: block;
+      background: #eee;
+    }
+
+    /* 2. 비율 유지 컨테이너 추가 (16:9 비율 유지) */
+    .img-ratio {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 9 / 16 = 0.5625 (즉, 56.25%) */
+        overflow: hidden;
+        background: #eee;
+    }
+    .img-ratio img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%; /* 부모 컨테이너 크기 사용 */
+        object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 */
+        display: block;
+    }
+
+    .pf-content {
+      padding: 20px;
+    }
+    .pf-content h4 { 
+      font-size: 1.25rem; 
+      color: var(--main-orange);
+      margin-bottom: 8px;
+    }
+    .pf-tag {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #999;
+      background: #f1f1f1;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .tech-stack-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .tech-logo {
+      width: 120px; 
+      height: auto;
+      /* filter: grayscale(100%); */
+      /* opacity: 0.7; */
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="회사 로고" />
+        </a>
+      </div>
+      <nav class="menu" aria-label="주 메뉴">
+        <a class="nav-link" href="company.html">COMPANY</a>
+        <a class="nav-link" href="why-trusion.html">WHY TRUSION</a>
+        <a class="nav-link" href="business.html">BUSINESS</a>
+        <a class="nav-link" href="clients.html">CLIENTS</a>
+        <a class="nav-link" href="location.html">LOCATION</a>
+      </nav>
+      </div>
+  </header>
+
+
+  <section class="page-hero page-hero--sticky">
+    <div class="wrap">
+      <h1>Business</h1>
+      <p>트루션의 핵심 솔루션과 성공적인 프로젝트 수행 경험을 확인하세요.</p>
+    </div>
+  </section>
+
+  <main>
+    
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Core Services</h2>
+          <p>산업 자동화 설비의 핵심 가치를 극대화하는 트루션의 주력 분야입니다.</p>
+        </div>
+        <div class="biz-card-grid">
+          <div class="biz-card">
+            <h3>프로그램 개발</h3>
+            <p>다양한 제조사의 PLC 및 Touch 프로그램을 고객 맞춤형으로 설계하고 구현합니다.</p>
+          </div>
+          <div class="biz-card">
+            <h3>전장 설계 및 배선</h3>
+            <p>AutoCAD, EPLAN을 활용한 효율적인 전장 설계와 현장 맞춤형 배선/하네스 제작을 제공합니다.</p>
+          </div>
+          <div class="biz-card">
+            <h3>SET-UP 및 CS</h3>
+            <p>설비 최종 설치 및 현장 SET-UP을 포함하여, 운영 중 발생하는 문제에 대한 신속한 CS 대응 및 설비 개조를 수행합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Industry Solutions & Success Stories</h2>
+          <p>반도체, 2차 전지, 디스플레이 등 첨단 산업에서 축적된 트루션의 성공 사례입니다.</p>
+        </div>
+
+        <div class="wrap" style="margin-bottom: 60px;">
+          <h3 style="font-size: 2rem; color: #333; margin-bottom: 20px; border-left: 5px solid var(--main-orange); padding-left: 10px;">
+            Semiconductor (반도체) 솔루션
+          </h3>
+          <p style="margin-bottom: 30px; color: #555;">
+            초정밀 제어가 요구되는 클린룸 환경에서 로봇 핸들링 시스템 개발 및 복잡한 공정 장비의 최적화된 SET-UP을 통해 생산 효율을 높입니다.
+          </p>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="assets/images/placeholder_semicon1.jpg" alt="클린룸 로봇 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">반도체 / SET-UP</span>
+                <h4>Marangoni Dryer & Single Spin Processing SET-UP</h4>
+                <p>고객사: SK Hynix, 삼성전자 (연구소)</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">핵심 공정 장비의 정밀 제어 시스템 구축 및 현장 SET-UP 완료.</p>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="assets/images/placeholder_semicon2.jpg" alt="반도체 공정 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">반도체 / 설비 개조</span>
+                <h4>SDP PM3 설비 개조 프로젝트</h4>
+                <p>고객사: 삼성디스플레이 (반도체 설비 개조)</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">노후화된 공정 설비의 PLC 및 전장 시스템 업그레이드를 통한 성능 개선.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap" style="margin-bottom: 60px;">
+          <h3 style="font-size: 2rem; color: #333; margin-bottom: 20px; border-left: 5px solid var(--main-orange); padding-left: 10px;">
+            Secondary Battery (2차 전지) 솔루션
+          </h3>
+          <p style="margin-bottom: 30px; color: #555;">
+            고속 권취, 전극 공정, 물류 자동화 라인에서 안정성과 정밀도를 확보하여 2차 전지 제조 생산성을 극대화합니다.
+          </p>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <img src="assets/images/placeholder_battery1.jpg" alt="2차전지 TAPING LINE 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">2차 전지 / 자동화</span>
+                <h4>국내외 TAPING LINE & 물류 자동화 SET-UP</h4>
+                <p>고객사: 삼성 SDI (천안), LG 에너지솔루션 (폴란드, 말레이시아)</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">전극 공정 및 배터리 셀 조립 라인의 초기 SET-UP 및 최적화.</p>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="assets/images/placeholder_battery2.jpg" alt="2차전지 조립 라인 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">2차 전지 / 개발</span>
+                <h4>체코 BMA 조립 LINE 개발</h4>
+                <p>고객사: 현대 모비스</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">배터리 모듈 조립 라인의 PLC 프로그램 및 시스템 개발 완료.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <h3 style="font-size: 2rem; color: #333; margin-bottom: 20px; border-left: 5px solid var(--main-orange); padding-left: 10px;">
+            Display (디스플레이) 솔루션
+          </h3>
+          <p style="margin-bottom: 30px; color: #555;">
+            대면적 코팅, 합착기 등 디스플레이 제조 핵심 공정 장비의 PLC 및 전장 솔루션 개발 경험을 보유하고 있습니다.
+          </p>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <img src="assets/images/placeholder_display1.jpg" alt="COATER 장비 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">디스플레이 / 개발</span>
+                <h4>A2 5.5G COATER & VCD 개발 및 SET-UP</h4>
+                <p>고객사: 삼성디스플레이, LG디스플레이 (광저우 공장)</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">주요 제조 공정 장비의 전장 및 PLC 프로그램 개발 프로젝트.</p>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="assets/images/placeholder_display2.jpg" alt="전자칠판 생산 라인 이미지" />
+              <div class="pf-content">
+                <span class="pf-tag">디스플레이 / 자동화</span>
+                <h4>전자칠판 COATER & 합착기 LINE 개발</h4>
+                <p>고객사: 국내외 복수 고객사</p>
+                <p style="font-size: 1rem; color: #777; margin-top: 5px;">전자칠판 등 최종 제품 생산 라인의 전체 자동화 시스템 구축.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container" style="text-align: center;">
+        <div class="section-title">
+          <h2>Technology Stack</h2>
+          <p>다양한 제조사의 PLC 및 제어 시스템에 대한 숙련된 기술력을 보유하고 있습니다.</p>
+        </div>
+       <div class="tech-stack-list">
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_siemens.png" alt="Siemens 로고" title="Siemens" />
+          </div>
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_mitsubishi.png" alt="Mitsubishi 로고" title="Mitsubishi" />
+          </div>
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_omron.png" alt="Omron 로고" title="Omron" />
+          </div>
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_beckhoff.png" alt="Beckhoff 로고" title="Beckhoff" />
+          </div>
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_ls.png" alt="LS 산전 로고" title="LS 산전" />
+          </div>
+          
+          <div class="tech-logo-wrapper">
+            <img src="assets/images/logo_proface.png" alt="Pro-Face 로고" title="Pro-Face (Touch)" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===== Footer (Trusion) ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <button class="to-top" aria-label="맨 위로">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 6l-7 7h4v5h6v-5h4z" fill="currentColor"/>
+      </svg>
+    </button>
+
+    <nav class="footer-nav" aria-label="하단 메뉴">
+      <a href="company.html">COMPANY</a>
+      <a href="why-trusion.html">WHY-TURSION</a>
+      <a href="business.html">BUSINESS</a>
+      <a href="clients.html">CLIENTS</a>
+      <a href="location.html">LOCATION</a>
+    </nav>
+
+    <div class="corp">트루션 (Trusion Co., Ltd.)</div>
+
+    <div class="policies">
+      <a href="#" data-popup="terms.html" data-title="이용약관">이용약관</a>
+      <a href="#" data-popup="privacy.html" data-title="개인정보처리방침" class="strong">개인정보처리방침</a>
+    </div>
+
+    <!-- 공용 모달 -->
+    <div id="policy-modal" class="pmodal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="pmodal__dialog" role="document">
+        <button type="button" class="pmodal__close" aria-label="닫기">&times;</button>
+        <h2 id="pmodal-title"></h2>
+        <div id="pmodal-body" class="pmodal__body"></div>
+      </div>
+    </div>
+
+    <!-- 외부 JS 불러오기 -->
+    <script src="assets/js/popup.js" defer></script>
+
+    <div class="legal-block">
+      <div class="legal-row top">
+        <span class="lb-label">대표자</span><span class="lb-text">조준희</span>
+        <span class="lb-label">사업자등록번호</span><span class="lb-text">470-16-02019</span>
+        <span class="lb-label">주소</span><span class="lb-text">경기도 용인시 처인구 남사읍 경기동로 21-11 2동</span>
+      </div>
+
+      <div class="legal-row bottom">
+        <span class="lb-label">대표전화</span><span class="lb-text">010-4602-5515</span>
+        <span class="lb-label">대표이메일</span>
+        <span class="lb-text"><a href="mailto:jojh@trusion.co.kr">jojh@trusion.co.kr</a></span>
+      </div>
+    </div>
+
+      <div class="legal">Copyright © <span id="copyYear"></span> 트루션 All rights reserved.</div>
+    </footer>
+
+    <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- JS -->
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+/* ===== Policy Modal (공통) ===== */
+.pmodal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:rgba(0,0,0,.6);
+}
+.pmodal[aria-hidden="false"]{ display:block; animation:fadeIn .18s ease-out; }
+@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+
+/* 닫힐 때 부드럽게(선택) */
+.pmodal.is-hiding{ animation:fadeOut .16s ease-in forwards; }
+@keyframes fadeOut{ from{opacity:1} to{opacity:0} }
+
+/* 다이얼로그 */
+.pmodal__dialog{
+  position:relative;
+  background:#fff;
+  margin:7.5% auto;
+  width:72%;
+  max-width:820px;
+  max-height:72vh;
+  overflow:auto;
+  border-radius:12px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* 본문 가독성 */
+.pmodal__body{
+  color:#222;
+  line-height:1.7;
+  font-size:15px;
+}
+.pmodal__body h2{ color:#111; font-weight:900; margin:0 0 12px; }
+.pmodal__body h3{ margin:18px 0 10px; font-weight:800; }
+.pmodal__body p{  margin:6px 0 12px; }
+.pmodal__body ul{ margin:6px 0 14px 20px; }
+.pmodal__body li{ margin:4px 0; }
+
+/* 닫기 버튼 */
+.pmodal__close{
+  position:absolute;
+  right:18px; top:12px;
+  font-size:22px;
+  border:0; background:transparent; cursor:pointer;
+  color:#111;
+}
+
+/* 모달 제목이 중복될 수 있어 숨김(본문 h2 사용) */
+#pmodal-title{ display:none; }
+
+/* 푸터 정책 링크 여백 */
+.policies a{ margin-right:18px; }
+
+/* 반응형 */
+@media (max-width: 780px){
+  .pmodal__dialog{ width:92%; margin:12% auto; padding:18px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .pmodal[aria-hidden="false"], .pmodal.is-hiding{ animation:none; }
+}

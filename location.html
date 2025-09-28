@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Location | Trusion</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/location.css" />
+  <link rel="stylesheet" href="assets/css/popup.css" />
+</head>
+<body>
+
+  <!-- ===== 상단 네비 ===== -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="회사 로고" />
+        </a>
+      </div>
+      <nav class="menu" aria-label="주 메뉴">
+        <a class="nav-link" href="company.html">COMPANY</a>
+        <a class="nav-link" href="why-trusion.html">WHY TRUSION</a>
+        <a class="nav-link" href="business.html">BUSINESS</a>
+        <a class="nav-link" href="clients.html">CLIENTS</a>
+        <a class="nav-link" href="location.html">LOCATION</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== 페이지 히어로 ===== -->
+  <section class="page-hero page-hero--sticky">
+    <div class="wrap">
+      <h1>Location</h1>
+      <p class="desc">오시는 길과 연락처</p>
+    </div>
+  </section>
+
+  <!-- ===== 메인 콘텐츠 ===== -->
+  <main class="container-1200 grid-2">
+    <!-- 지도 영역 -->
+    <section class="card">
+      <iframe title="회사 위치" loading="lazy" allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.159677033947!2d127.12820767672049!3d37.148902547964475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b490028a752f5%3A0x622e9e51ba0dfe9e!2z7Yq466Oo7IWY!5e0!3m2!1sko!2skr!4v1758782400836!5m2!1sko!2skr"
+        style="width:100%; height:420px; border:0"></iframe>
+          <div class="map-actions"></div>
+          <a class="btn btn-primary" target="_blank" href="https://maps.google.com/?q=Trusion">
+        지도 앱으로 열기
+      </a>
+      </div>
+    </section>
+
+    <!-- 정보 카드 -->
+    <section class="card info-card">
+      <h2>트루션(Trusion) 본사</h2>
+      <ul class="info-list">
+        <li>
+          <span class="label">주소</span>
+          <span class="value" id="addr-text">경기도 용인시 처인구 남사읍 경기동로 21-11 2동</span>
+          <button class="mini-btn" data-copy="#addr-text">복사</button>
+        </li>
+        <li>
+          <span class="label">전화</span>
+          <span class="value" id="tel-text">010-4602-5515</span>
+          <button class="mini-btn" data-copy="#tel-text">복사</button>
+        </li>
+        <li>
+          <span class="label">이메일</span>
+          <span class="value" id="mail-text">jojh@trusion.co.kr</span>
+          <button class="mini-btn" data-copy="#mail-text">복사</button>
+        </li>
+        <li>
+          <span class="label">영업시간</span>
+          <span class="value">평일 09:00 ~ 18:00 (점심시간 12:30 ~ 13:30)</span>
+        </li>
+      </ul>
+
+      <div class="directions">
+        <h3>오시는 길</h3>
+        <strong>자가용</strong>
+        <p>네비게이션에 “트루션” 검색</p>
+      </div>
+    </section>
+
+    <section class="card info-card">
+            
+            <div class="company-photo">
+              <img src="assets/images/Company.jpg" alt="트루션 본사 건물 전경" />
+            </div>
+              <ul class="info-list">
+                </ul>
+
+        <div class="directions">
+            </div>
+  </section>
+
+
+  </main>
+
+  <!-- ===== Footer (Trusion) ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <button class="to-top" aria-label="맨 위로">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 6l-7 7h4v5h6v-5h4z" fill="currentColor"/>
+      </svg>
+    </button>
+
+    <nav class="footer-nav" aria-label="하단 메뉴">
+      <a href="company.html">COMPANY</a>
+      <a href="why-trusion.html">WHY-TURSION</a>
+      <a href="business.html">BUSINESS</a>
+      <a href="clients.html">CLIENTS</a>
+      <a href="location.html">LOCATION</a>
+    </nav>
+
+    <div class="corp">트루션 (Trusion Co., Ltd.)</div>
+
+    <div class="policies">
+      <a href="#" data-popup="terms.html" data-title="이용약관">이용약관</a>
+      <a href="#" data-popup="privacy.html" data-title="개인정보처리방침" class="strong">개인정보처리방침</a>
+    </div>
+
+    <!-- 공용 모달 -->
+    <div id="policy-modal" class="pmodal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="pmodal__dialog" role="document">
+        <button type="button" class="pmodal__close" aria-label="닫기">&times;</button>
+        <h2 id="pmodal-title"></h2>
+        <div id="pmodal-body" class="pmodal__body"></div>
+      </div>
+    </div>
+
+    <!-- 외부 JS 불러오기 -->
+    <script src="assets/js/popup.js" defer></script>
+
+    <div class="legal-block">
+      <div class="legal-row top">
+        <span class="lb-label">대표자</span><span class="lb-text">조준희</span>
+        <span class="lb-label">사업자등록번호</span><span class="lb-text">470-16-02019</span>
+        <span class="lb-label">주소</span><span class="lb-text">경기도 용인시 처인구 남사읍 경기동로 21-11 2동</span>
+      </div>
+
+      <div class="legal-row bottom">
+        <span class="lb-label">대표전화</span><span class="lb-text">010-4602-5515</span>
+        <span class="lb-label">대표이메일</span>
+        <span class="lb-text"><a href="mailto:jojh@trusion.co.kr">jojh@trusion.co.kr</a></span>
+      </div>
+    </div>
+
+      <div class="legal">Copyright © <span id="copyYear"></span> 트루션 All rights reserved.</div>
+    </footer>
+
+  <!-- ✅ 토스트 알림 -->
+  <div id="toast" class="toast"></div>
+
+  <!-- JS -->
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/footer.js"></script>
+</body>
+</html>
