@@ -1,9 +1,0 @@
-# URL 재작성 모듈(mod_rewrite) 활성화
-RewriteEngine On
-
-# 파일이나 디렉토리가 실제로 존재하지 않을 때만 다음 규칙을 적용
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# .html이 없는 주소로 접근 시, 내부적으로 .html 파일을 찾아서 보여줌
-RewriteRule ^(.*)$ $1.html [L]
