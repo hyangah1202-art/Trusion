@@ -568,3 +568,21 @@ body.why .hero-spacer{ height:var(--hero-h); }
   .org-title{ font-size:13px; padding:5px 9px; }
   .org-desc{ font-size:12px; line-height:1.5; padding-left:12px; }
 }
+
+.legal-row {
+  margin-bottom: 6px;
+}
+
+.legal-row.top span {
+  margin-right: 15px; /* 상단 항목 간격 */
+}
+
+.legal-row.bottom span {
+  margin-right: 15px; /* 하단 항목 간격 */
+}
+
+.lb-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
