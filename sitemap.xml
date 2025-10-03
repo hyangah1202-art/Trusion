@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://trusion.co.kr/</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 회사 소개 -->
+  <url>
+    <loc>https://trusion.co.kr/company.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- WHY TRUSION -->
+  <url>
+    <loc>https://trusion.co.kr/why-trusion.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BUSINESS -->
+  <url>
+    <loc>https://trusion.co.kr/business.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- SOLUTION -->
+  <url>
+    <loc>https://trusion.co.kr/solution.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- COMMUNITY -->
+  <url>
+    <loc>https://trusion.co.kr/community.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- LOCATION -->
+  <url>
+    <loc>https://trusion.co.kr/location.html</loc>
+    <lastmod>2025-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
