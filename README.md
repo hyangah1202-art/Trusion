@@ -15,4 +15,9 @@
 - cloudflare 연동 (GitHub으로 연동해서 바로 전송)
 - 가비아에서 따로 꺼냄
 - cloudflare에서 메일 연동 ( 연동 안시키니 메일 전송 불가능 현상 발생 )
-- 
+
+## 2025-10-05
+ - Gitbub랑 VS code 연동 완료
+ - Why Trusion 오타 수정
+ - 홈페이지 Tab Trsuion 마크 추가
+  
