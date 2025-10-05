@@ -32,10 +32,7 @@ p, li, a, span, div{ font-size:1.125rem; }
 *, *::before, *::after { box-sizing: border-box; }
 
 /* 공통 컨테이너 */
-/*.container{ max-width:1200px; margin:0 auto; padding:0 20px; }*/
-
-
-.container { padding-left: 120px; padding-right: 120px; }
+.container{ max-width:1200px; margin:0 auto; padding:0 20px; }
 html, body { overflow-x: hidden; }
 .container-1200{ max-width:1200px; margin:0 auto; padding:0 20px 80px; }
 
